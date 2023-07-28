@@ -186,6 +186,8 @@ services:
       POSTGRES_USER: root
     expose:
       - 5433
+    ports:
+      - "5433:5432"
     restart: unless-stopped
     volumes:
       - ./init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
